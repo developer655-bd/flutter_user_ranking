@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">0dp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="nutrition_widget_footer_button_icon_size">18dp</dimen>
+    <dimen name="nutrition_widget_small_progress_height">4dp</dimen>
+    <dimen name="nutrition_widget_small_progress_margin">4dp</dimen>
+
+</resources>
