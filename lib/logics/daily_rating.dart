@@ -18,7 +18,7 @@ class DailyRanking {
       date: DateTime.parse(json['date']),
       userRankings:
           (json['userRankings'] as List)
-              .map((statsJson) => UserStats.fromJson(statsJson))
+              .map((statsJson) => UserStats.from(statsJson))
               .toList(),
     );
   }

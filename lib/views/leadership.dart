@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import '../manager.dart';
-import '../user_stats.dart';
+import '../logics/manager.dart';
+import '../logics/user_stats.dart';
 
 
 class LeaderboardTab extends StatefulWidget {
@@ -46,7 +46,6 @@ class _LeaderboardTabState extends State<LeaderboardTab> {
         context,
         listen: false,
       );
-
       _topUsers = await rankingManager.getTopUsers(limit: 10);
     } catch (e) {
       if (mounted) {

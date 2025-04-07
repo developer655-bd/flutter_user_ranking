@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../activity.dart';
-import '../manager.dart';
+import '../logics/user_activity.dart';
+import '../logics/manager.dart';
 import 'history.dart';
 import 'leadership.dart';
 import 'profile.dart';

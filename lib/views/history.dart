@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../activity.dart';
-import '../manager.dart';
+import '../logics/user_activity.dart';
+import '../logics/manager.dart';
 
 class HistoryTab extends StatefulWidget {
   final String userId;

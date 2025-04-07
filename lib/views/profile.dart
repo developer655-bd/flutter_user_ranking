@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../manager.dart';
-import '../user_stats.dart';
+import '../logics/manager.dart';
+import '../logics/user_stats.dart';
 
 class ProfileTab extends StatefulWidget {
   final String userId;

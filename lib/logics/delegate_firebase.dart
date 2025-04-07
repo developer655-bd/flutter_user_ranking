@@ -1,7 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:intl/intl.dart';
 
-import 'activity.dart';
+import 'user_activity.dart';
 import 'daily_rating.dart';
 import 'delegate.dart';
 import 'user_stats.dart';
@@ -42,7 +42,7 @@ class FirebaseRemoteDelegate implements RemoteDelegate {
       final snapshot = await _usersRef.child(userId).get();
 
       if (snapshot.exists) {
-        return UserStats.fromJson(
+        return UserStats.from(
           Map<String, dynamic>.from(snapshot.value as Map),
         );
       }
@@ -58,7 +58,7 @@ class FirebaseRemoteDelegate implements RemoteDelegate {
   Stream<UserStats> listenToUserStats(String userId) {
     return _usersRef.child(userId).onValue.map((event) {
       if (event.snapshot.exists) {
-        return UserStats.fromJson(
+        return UserStats.from(
           Map<String, dynamic>.from(event.snapshot.value as Map),
         );
       }
@@ -134,7 +134,7 @@ class FirebaseRemoteDelegate implements RemoteDelegate {
           Map<dynamic, dynamic> data = event.snapshot.value as Map;
 
           data.forEach((key, value) {
-            users.add(UserStats.fromJson(Map<String, dynamic>.from(value)));
+            users.add(UserStats.from(Map<String, dynamic>.from(value)));
           });
 
           users.sort((a, b) => b.totalPoints.compareTo(a.totalPoints));

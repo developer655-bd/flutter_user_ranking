@@ -1,4 +1,4 @@
-import 'activity.dart';
+import 'user_activity.dart';
 import 'daily_rating.dart';
 import 'user_stats.dart';
 
